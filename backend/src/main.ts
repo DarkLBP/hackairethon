@@ -16,9 +16,13 @@ app.disable('x-powered-by');
  * Inyección de la aplicación a las clases manejadoras
  */
 import {Usuario} from './controllers/usuario';
+import {RegisterController} from './controllers/register.controller';
 
 const usuarioController = new Usuario(app, '/usuario');
 usuarioController.linkRoutes();
+
+const registerController = new RegisterController(app, '/api');
+registerController.linkRoutes();
 
 app.get('/', (_req, res) => {
     res.status(200);
