@@ -7,6 +7,7 @@ import {router} from './router-decorators';
  * Carga de controladores, no hay que crear instancias
  */
 import './controllers/usuario.controller';
+import './controllers/auth.controller';
 
 // Se usará https cuando estén configuradas las firmas
 // import https from 'https';
