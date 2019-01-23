@@ -1,5 +1,4 @@
 import express from 'express';
-import bodyparser from 'body-parser';
 import cors from 'cors';
 import {router} from './router-decorators';
 
@@ -16,7 +15,7 @@ import './controllers/auth.controller';
  */
 const httpsPort = 8081;
 const app: express.Application = express();
-app.use(bodyparser.json());
+app.use(express.json());
 app.use(cors());
 app.use(router);
 app.disable('x-powered-by');
